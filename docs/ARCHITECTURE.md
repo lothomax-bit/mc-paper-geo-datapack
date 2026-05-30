@@ -54,11 +54,13 @@ Ein Minecraft-Chunk ist 16×16 Blöcke breit und wird in **Subchunks** à 16×16
 
 ## Worldgen-Verhalten
 
-Das Datapack ändert **nur** den Dimension Type. Die Noise Settings (Terrain-Generierung)
-bleiben vanilla – das bedeutet:
-- Terrain generiert normal bis ca. Y 256
-- Y 256 bis Y 1999 ist **leere Luft**
-- Für sinnvolles Terrain in der Höhe: eigene `worldgen/noise_settings/overworld.json` nötig (Phase 3)
+Die Noise Settings (`data/minecraft/worldgen/noise_settings/overworld.json`) wurden an die neue Bauhöhe angepasst.
+Die Parameter für die Terrain-Generierung wurden entsprechend skaliert:
+- **Bergketten** ragen nun organisch bis maximal Y 1700 (ca. 6,6× Skalierung gegenüber Vanilla).
+- **Höhlensysteme** generieren bis zu einer Höhe von Y 900.
+- Der **Meeresspiegel (Sea Level)** bleibt bei Y 63.
+- Der Bereich Y 1700 bis Y 1999 bleibt leere Luft (als Baupuffer).
+- Basis-Parameter: `noise.height = 2064` und `noise.min_y = -64`.
 
 ## Abhängigkeiten
 
