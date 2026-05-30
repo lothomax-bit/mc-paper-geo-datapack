@@ -1,7 +1,12 @@
 {
   "pack": {
     "pack_format": 101,
-    "supported_formats": { "min_inclusive": 101, "max_inclusive": 101 },
-    "description": "Geo Datapack – Build Height 2000 for MC 26.1.2"
+    "supported_formats": {
+      "min_inclusive": 101,
+      "max_inclusive": 101
+    },
+    "description": "Geo Datapack \u2013 Build Height 2000 for MC 26.1.2",
+    "min_format": 101,
+    "max_format": 101
   }
 }
