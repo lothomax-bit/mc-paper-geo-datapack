@@ -28,8 +28,12 @@ mc-paper-geo-datapack/
 │       │   ├── overworld.json               ← KERN-DATEI: Bauhöhe-Definition
 │       │   └── overworld_caves.json         ← Caves-Variante, muss konsistent sein
 │       └── worldgen/
+│           ├── density_function/            ← NEU: Inline Density Functions
+│           │   └── overworld/
+│           │       ├── depth.json
+│           │       └── ridges_folded.json
 │           └── noise_settings/
-│               └── overworld.json           ← Terrain-Generierung (Task 4)
+│               └── overworld.json           ← Terrain-Generierung
 └── docs/
     ├── ARCHITECTURE.md
     ├── PAPER_COMPATIBILITY.md
@@ -76,39 +80,84 @@ Wenn `height` geändert wird:
 - Bei Paper-Bugs: `docs/PAPER_COMPATIBILITY.md` ergänzen
 - Quellen immer mit Datum und Minecraft-Version verlinken
 
-### Task-Typ 4: Noise Settings (Terrain-Generierung) erstellen/anpassen
+### Task-Typ 4: Noise Settings (Terrain-Generierung) – Referenz-Task (veraltet)
 
-Diese Aufgabe betrifft `data/minecraft/worldgen/noise_settings/overworld.json`.
+Siehe Task-Typ 5 – die reine `noise_settings/overworld.json` Anpassung reicht NICHT aus.
 
-#### Designentscheidungen (verbindlich, nicht zur Diskussion):
+### Task-Typ 5: Terrain-Höhe KORREKT skalieren – Density Functions
 
-**1. Art der Generierung: Gestreckte/skalierte Berge**
-- Die bestehende Vanilla-Terrain-Logik (Extreme Hills / Windswept Hills etc.) soll
-  **vertikal gestreckt** werden, sodass Bergketten organisch bis maximal **Y 1700** ragen können.
-- KEIN flaches Terrain mit schwebenden Inseln darüber.
-- KEIN abrupter Bruch bei Y 256 – das Terrain soll nahtlos und natürlich wirken.
-- Ziel: Wer die Welt von unten nach oben fliegt, soll ein kontinuierlich ansteigendes
-  Gebirge erleben, keine künstliche Grenze.
-- Y 1700 bis Y 1999 bleibt **Luft** (Puffer zur Bauhöhen-Grenze).
+#### Warum Task 4 allein nicht funktioniert (Root Cause)
 
-**2. Sea Level (Meeresspiegel)**
-- Bleibt bei **Y 63** (Vanilla-Standard).
-- Nicht verändern.
+Das Problem: Die aktuelle `noise_settings/overworld.json` referenziert Vanilla Density Functions
+über Pfad-Strings wie `"minecraft:overworld/depth"` und `"minecraft:overworld/ridges"`.
+Diese Vanilla-internen Density Functions sind **hardcodiert** und kennen nur den Vanilla-Höhenbereich
+bis ca. Y 256–320. Das `noise` Block mit `height: 2064` definiert nur den **verfügbaren Raum**,
+nicht die tatsächlich generierten Berg-Höhen.
 
-**3. Dateipfad**
-- Korrekt: `data/minecraft/worldgen/noise_settings/overworld.json`
-- Diese Datei **überschreibt** die Vanilla Noise Settings für den Overworld.
+**Der Terrain-Generator berechnet die Blockdichte anhand der `depth`-Density-Function.**
+Diese liefert bei Y > ~320 bereits negative Werte (= Luft) – egal wie groß `noise.height` ist.
 
-**4. Basis-Datei**
-- Ja: Vanilla `overworld.json` für Minecraft 1.21 als Basis verwenden.
-- Referenz (Vanilla-Original): https://github.com/misode/mcmeta/blob/data/data/minecraft/worldgen/noise_settings/overworld.json
-- Nur die relevanten Skalierungs-Parameter anpassen, alles andere vanilla-kompatibel lassen.
+#### Lösung: Eigene Density Functions
 
-**5. Höhlen (Caves)**
-- Höhlen sollen **ebenfalls nach oben skaliert** werden, proportional zur Terrain-Streckung.
-- Konkret: Höhlen können bis ca. **Y 800–900** vorkommen.
-  (Vanilla-Höhlen reichen bis ca. Y 60 über Meeresspiegel → skalierter Faktor ~13× → ~900)
-- Keine Höhlen über Y 900 – oberhalb soll es massives Gestein / Luft geben.
+Die Vanilla-Referenzen müssen durch **eigene, inline definierte oder datapack-lokale**
+Density Functions ersetzt werden, die den neuen Höhenbereich kennen.
+
+**Ansatz A – Inline in noise_settings (einfacher):**
+Die `noise_router`-Felder `depth`, `ridges` etc. direkt als verschachteltes JSON-Objekt
+angeben statt als String-Referenz. So werden Vanilla-Density-Functions vollständig überschrieben.
+
+**Ansatz B – Eigene density_function JSON-Dateien (sauberer):**
+Dateien unter `data/minecraft/worldgen/density_function/overworld/depth.json` etc. anlegen
+und in `noise_settings/overworld.json` als `"minecraft:overworld/depth"` referenzieren
+(Datapack-Dateien überschreiben Vanilla-Dateien unter gleichem Namespace+Pfad).
+
+**Empfehlung: Ansatz B verwenden.**
+
+#### Konkrete Implementierung (Ansatz B)
+
+**Schritt 1: Vanilla Density Functions als Basis laden**
+Vanilla-Originale unter:
+- `depth`: https://github.com/misode/mcmeta/blob/data/data/minecraft/worldgen/density_function/overworld/depth.json
+- `ridges`: https://github.com/misode/mcmeta/blob/data/data/minecraft/worldgen/density_function/overworld/ridges.json
+- `ridges_folded`: https://github.com/misode/mcmeta/blob/data/data/minecraft/worldgen/density_function/overworld/ridges_folded.json
+- `sloped_cheese`: https://github.com/misode/mcmeta/blob/data/data/minecraft/worldgen/density_function/overworld/sloped_cheese.json
+- `continents`: https://github.com/misode/mcmeta/blob/data/data/minecraft/worldgen/density_function/overworld/continents.json
+- `erosion`: https://github.com/misode/mcmeta/blob/data/data/minecraft/worldgen/density_function/overworld/erosion.json
+
+**Schritt 2: Skalierungsfaktor anwenden**
+Der Skalierungsfaktor für Y 1700 beträgt **~6.6** (1700 / 256 ≈ 6.64).
+
+In `depth.json` muss der `y_scaled`-Operator (oder äquivalente Noise-Berechnung)
+so angepasst werden, dass die Density-Kurve um Faktor 6.6 gestreckt wird.
+
+Konkret: In Vanilla berechnet `depth` einen Wert der bei Y ≈ 256 auf 0 fällt (= Luft).
+Nach der Skalierung soll dieser 0-Übergang erst bei Y ≈ 1700 stattfinden.
+
+Beispiel für die Skalierung über einen `mul`-Knoten:
+```json
+{
+  "type": "minecraft:mul",
+  "argument1": 6.6,
+  "argument2": {
+    "type": "minecraft:y_clamped_gradient",
+    "from_y": -64,
+    "to_y": 1700,
+    "from_value": 1.5,
+    "to_value": -1.5
+  }
+}
+```
+
+**Schritt 3: sloped_cheese skalieren**
+`sloped_cheese.json` kontrolliert die Bergspitzen. Die `offset`-Werte müssen
+proportional zum Skalierungsfaktor angepasst werden.
+
+**Schritt 4: Caves begrenzen**
+In `noise_settings/overworld.json` gibt es einen `large_ore_veins_enabled` und
+`aquifers_enabled` Block sowie Cave-spezifische Density Functions
+(`minecraft:overworld/caves/...`). Diese Cave-Density-Functions ebenfalls
+als eigene Dateien unter `data/minecraft/worldgen/density_function/overworld/caves/`
+überschreiben und den Cave-Erzeugungsbereich auf max. Y 900 begrenzen.
 
 #### Höhen-Übersicht (Zielwerte):
 
@@ -117,51 +166,33 @@ Diese Aufgabe betrifft `data/minecraft/worldgen/noise_settings/overworld.json`.
 | Tiefstes Bedrock | -64 | Vanilla-Standard |
 | Meeresspiegel | 63 | Vanilla-Standard, nicht ändern |
 | Normale Oberfläche | 64–256 | Vanilla-Terrain-Bereich |
-| Bergketten (max.) | bis **Y 1700** | Ziel dieser Noise-Anpassung |
+| Bergketten (max.) | bis **Y 1700** | Ziel dieser Anpassung |
 | Luft-Puffer | Y 1700–1999 | Leer, Spielraum für Bauten |
 | Max. Bauhöhe | Y 1999 | Durch dimension_type definiert |
 | Höhlen (max.) | bis **Y 900** | Skalierte Cave-Generierung |
 
-#### Konkrete Noise-Parameter-Änderungen:
+#### Validierung:
+1. JSON-Syntax aller neuen Dateien prüfen
+2. Im Spiel: Mit `/tp @s ~ 1500 ~` testen ob dort Terrain (Stein) existiert
+3. Mit `/tp @s ~ 1750 ~` testen ob dort Luft ist
+4. Alle Density Function Dateien unter: https://misode.github.io/worldgen/density-function/ validieren
+5. `sea_level` in noise_settings muss `63` bleiben
 
-Die folgenden Werte im `noise` Block der `overworld.json` anpassen:
-
-```json
-"noise": {
-  "height": 2064,
-  "min_y": -64,
-  "size_horizontal": 1,
-  "size_vertical": 2
-}
+#### Commit nach Fertigstellung:
 ```
-
-Im `noise_router` die Terrain-Amplituden erhöhen:
-- `initial_density_without_jaggedness`: Skalierungsfaktor für Bergspitzen anpassen
-- `depth`: Offset so anpassen, dass Meeresboden bei Y ~-30 bleibt, Bergspitzen bis Y ~1700
-- `ridges` (Peaks & Valleys): Amplitude stark erhöhen damit Bergketten bis Y 1700 ragen
-- Skalierungsfaktor gegenüber Vanilla ca. **~6,6×** (1700 / 256 ≈ 6,6)
-
-Die `spawn_target` Einträge beibehalten wie in Vanilla.
-
-#### Validierung nach der Erstellung:
-1. JSON-Syntax mit einem Linter prüfen
-2. Sicherstellen dass `noise.height` == `dimension_type/overworld.json` `height` (beide: 2064)
-3. Sicherstellen dass `noise.min_y` == `dimension_type/overworld.json` `min_y` (beide: -64)
-4. `sea_level` muss `63` sein
-5. Datei unter: https://misode.github.io/worldgen/noise-settings/ validieren
-
-#### Nach der Erstellung:
-- `docs/ARCHITECTURE.md` → Abschnitt "Worldgen-Verhalten" aktualisieren
-- Eintragen welche Noise-Parameter geändert wurden und warum
-- Commit-Message: `feat(worldgen): scale terrain noise to Y 1700 with cave extension to Y 900`
+feat(worldgen): replace vanilla density functions to scale terrain to Y 1700
+```
 
 ## Referenz-Links
 
-- Minecraft Wiki Dimension Type: https://minecraft.wiki/w/Dimension_type
+- Minecraft Wiki Density Functions: https://minecraft.wiki/w/Density_function
 - Minecraft Wiki Noise Settings: https://minecraft.wiki/w/Custom_world_generation
-- Misode Dimension Generator: https://misode.github.io/dimension/
+- Misode Density Function Generator: https://misode.github.io/worldgen/density-function/
 - Misode Noise Settings Generator: https://misode.github.io/worldgen/noise-settings/
-- Vanilla overworld.json (Referenz): https://github.com/misode/mcmeta/blob/data/data/minecraft/worldgen/noise_settings/overworld.json
+- Vanilla density_function Ordner: https://github.com/misode/mcmeta/tree/data/data/minecraft/worldgen/density_function/overworld
+- Vanilla noise_settings/overworld.json: https://github.com/misode/mcmeta/blob/data/data/minecraft/worldgen/noise_settings/overworld.json
+- Minecraft Wiki Dimension Type: https://minecraft.wiki/w/Dimension_type
+- Misode Dimension Generator: https://misode.github.io/dimension/
 - Pack Format Liste: https://minecraft.wiki/w/Pack_format
 - PaperMC Docs: https://docs.papermc.io/paper/reference/world-configuration/
 - Version Explorer: https://misode.github.io/versions/
@@ -171,8 +202,8 @@ Die `spawn_target` Einträge beibehalten wie in Vanilla.
 Format: `type(scope): beschreibung`
 
 Types:
-- `feat`: Neue Funktion (z.B. neue Dimension hinzugefügt)
-- `fix`: Bugfix (z.B. falsche height-Berechnung)
+- `feat`: Neue Funktion
+- `fix`: Bugfix
 - `docs`: Nur Dokumentation
 - `chore`: Metadaten, pack_format-Updates
 - `test`: Test-Welten, Validierungsskripte
@@ -180,7 +211,7 @@ Types:
 Beispiele:
 ```
 feat(dimension): raise overworld height to 2064 blocks
-feat(worldgen): scale terrain noise to Y 1700 with cave extension to Y 900
+feat(worldgen): replace vanilla density functions to scale terrain to Y 1700
 fix(overworld): correct height to be multiple of 16
 docs(paper): add chunk loading workaround for Paper 1.21.x
 chore: update pack_format to 101 for MC 26.1.2
