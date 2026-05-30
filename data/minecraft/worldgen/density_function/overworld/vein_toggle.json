@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:interpolated",
+  "argument": {
+    "type": "minecraft:y_clamped_gradient",
+    "from_y": -60,
+    "to_y": -40,
+    "from_value": -8.0,
+    "to_value": 0.0
+  }
+}
