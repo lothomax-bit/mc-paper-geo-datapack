@@ -84,11 +84,12 @@ Diese Aufgabe betrifft `data/minecraft/worldgen/noise_settings/overworld.json`.
 
 **1. Art der Generierung: Gestreckte/skalierte Berge**
 - Die bestehende Vanilla-Terrain-Logik (Extreme Hills / Windswept Hills etc.) soll
-  **vertikal gestreckt** werden, sodass Berge organisch bis Y 800 ragen können.
+  **vertikal gestreckt** werden, sodass Bergketten organisch bis maximal **Y 1700** ragen können.
 - KEIN flaches Terrain mit schwebenden Inseln darüber.
 - KEIN abrupter Bruch bei Y 256 – das Terrain soll nahtlos und natürlich wirken.
 - Ziel: Wer die Welt von unten nach oben fliegt, soll ein kontinuierlich ansteigendes
   Gebirge erleben, keine künstliche Grenze.
+- Y 1700 bis Y 1999 bleibt **Luft** (Puffer zur Bauhöhen-Grenze).
 
 **2. Sea Level (Meeresspiegel)**
 - Bleibt bei **Y 63** (Vanilla-Standard).
@@ -104,10 +105,22 @@ Diese Aufgabe betrifft `data/minecraft/worldgen/noise_settings/overworld.json`.
 - Nur die relevanten Skalierungs-Parameter anpassen, alles andere vanilla-kompatibel lassen.
 
 **5. Höhlen (Caves)**
-- Höhlen sollen **ebenfalls nach oben skaliert** werden, passend zur Terrain-Streckung.
-- Konkret: Höhlen können bis ca. Y 400–500 vorkommen (entspricht der skalierten
-  Vanilla-Höhlen-Tiefe relativ zur neuen Terrain-Höhe).
-- Keine Höhlen über Y 500 – oberhalb soll es massives Gestein / Luft geben.
+- Höhlen sollen **ebenfalls nach oben skaliert** werden, proportional zur Terrain-Streckung.
+- Konkret: Höhlen können bis ca. **Y 800–900** vorkommen.
+  (Vanilla-Höhlen reichen bis ca. Y 60 über Meeresspiegel → skalierter Faktor ~13× → ~900)
+- Keine Höhlen über Y 900 – oberhalb soll es massives Gestein / Luft geben.
+
+#### Höhen-Übersicht (Zielwerte):
+
+| Bereich | Y-Koordinate | Beschreibung |
+|---|---|---|
+| Tiefstes Bedrock | -64 | Vanilla-Standard |
+| Meeresspiegel | 63 | Vanilla-Standard, nicht ändern |
+| Normale Oberfläche | 64–256 | Vanilla-Terrain-Bereich |
+| Bergketten (max.) | bis **Y 1700** | Ziel dieser Noise-Anpassung |
+| Luft-Puffer | Y 1700–1999 | Leer, Spielraum für Bauten |
+| Max. Bauhöhe | Y 1999 | Durch dimension_type definiert |
+| Höhlen (max.) | bis **Y 900** | Skalierte Cave-Generierung |
 
 #### Konkrete Noise-Parameter-Änderungen:
 
@@ -124,18 +137,11 @@ Die folgenden Werte im `noise` Block der `overworld.json` anpassen:
 
 Im `noise_router` die Terrain-Amplituden erhöhen:
 - `initial_density_without_jaggedness`: Skalierungsfaktor für Bergspitzen anpassen
-- `depth`: Offset so anpassen, dass Meeresboden bei Y ~-30 bleibt, Oberfläche bei Y ~100–800
-- `ridges` (Peaks & Valleys): Amplitude erhöhen damit Berge bis Y 800 ragen
+- `depth`: Offset so anpassen, dass Meeresboden bei Y ~-30 bleibt, Bergspitzen bis Y ~1700
+- `ridges` (Peaks & Valleys): Amplitude stark erhöhen damit Bergketten bis Y 1700 ragen
+- Skalierungsfaktor gegenüber Vanilla ca. **~6,6×** (1700 / 256 ≈ 6,6)
 
-Die `spawn_target` Einträge so setzen:
-```json
-"spawn_target": [
-  {"parameter": {"min": -1.0, "max": -0.97}, "value": 0.713},
-  {"parameter": {"min": -0.97, "max": 0.0},  "value": 0.0},
-  {"parameter": {"min": 0.0,  "max": 0.5},   "value": 0.0},
-  {"parameter": {"min": 0.5,  "max": 1.0},   "value": 0.0}
-]
-```
+Die `spawn_target` Einträge beibehalten wie in Vanilla.
 
 #### Validierung nach der Erstellung:
 1. JSON-Syntax mit einem Linter prüfen
@@ -147,7 +153,7 @@ Die `spawn_target` Einträge so setzen:
 #### Nach der Erstellung:
 - `docs/ARCHITECTURE.md` → Abschnitt "Worldgen-Verhalten" aktualisieren
 - Eintragen welche Noise-Parameter geändert wurden und warum
-- Commit-Message: `feat(worldgen): scale terrain noise to Y 800 with cave extension to Y 500`
+- Commit-Message: `feat(worldgen): scale terrain noise to Y 1700 with cave extension to Y 900`
 
 ## Referenz-Links
 
@@ -174,7 +180,7 @@ Types:
 Beispiele:
 ```
 feat(dimension): raise overworld height to 2064 blocks
-feat(worldgen): scale terrain noise to Y 800 with cave extension to Y 500
+feat(worldgen): scale terrain noise to Y 1700 with cave extension to Y 900
 fix(overworld): correct height to be multiple of 16
 docs(paper): add chunk loading workaround for Paper 1.21.x
 chore: update pack_format to 101 for MC 26.1.2
