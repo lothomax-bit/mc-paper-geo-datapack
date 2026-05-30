@@ -1,0 +1,40 @@
+name: Build Datapack Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build clean ZIP
+        run: |
+          mkdir -p build/mc-paper-geo-datapack
+          cp -r data pack.mcmeta build/mc-paper-geo-datapack/
+          cd build
+          zip -r ../mc-paper-geo-datapack.zip mc-paper-geo-datapack/
+          cd ..
+          echo "ZIP contents:"
+          unzip -l mc-paper-geo-datapack.zip | head -20
+
+      - name: Upload as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: mc-paper-geo-datapack
+          path: mc-paper-geo-datapack.zip
+
+      - name: Create Release
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: mc-paper-geo-datapack.zip
+          body: |
+            ## Installation
+            1. `mc-paper-geo-datapack.zip` herunterladen
+            2. Direkt (ohne entpacken!) in `world/datapacks/` legen
+            3. Neue Welt erstellen
