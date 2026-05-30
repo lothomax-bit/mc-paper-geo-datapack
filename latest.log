@@ -1,0 +1,488 @@
+[17:03:28] [main/INFO]: Loading Minecraft 26.1.2 with Fabric Loader 0.19.2
+[17:03:28] [main/INFO]: Mappings not present!
+[17:03:28] [main/INFO]: Loading 90 mods:
+	- fabric-api 0.150.0+26.1.2
+	   |-- fabric-api-base 2.0.3+ece063234c
+	   |-- fabric-api-lookup-api-v1 2.0.11+d5a053b64c
+	   |-- fabric-biome-api-v1 18.0.4+35c80edc4c
+	   |-- fabric-block-api-v1 3.0.2+ec56b6014c
+	   |-- fabric-block-getter-api-v2 2.0.6+ec56b6014c
+	   |-- fabric-command-api-v2 3.0.5+e2bdee784c
+	   |-- fabric-content-registries-v0 11.2.0+76b0b6bb4c
+	   |-- fabric-convention-tags-v2 4.6.1+4f11f7994c
+	   |-- fabric-crash-report-info-v1 1.0.3+9f78a5a84c
+	   |-- fabric-creative-tab-api-v1 5.0.11+d871b99e4c
+	   |-- fabric-data-attachment-api-v1 2.2.7+44a0bd1d4c
+	   |-- fabric-data-generation-api-v1 24.2.1+73b1f9054c
+	   |-- fabric-debug-api-v1 1.0.1+c792624d4c
+	   |-- fabric-dimensions-v1 5.1.5+9cbf5da54c
+	   |-- fabric-entity-events-v1 5.0.2+e2bdee784c
+	   |-- fabric-events-interaction-v0 5.2.2+07b380be4c
+	   |-- fabric-game-rule-api-v1 4.0.5+d871b99e4c
+	   |-- fabric-item-api-v1 14.1.2+73d134684c
+	   |-- fabric-key-mapping-api-v1 2.0.4+e2bdee784c
+	   |-- fabric-lifecycle-events-v1 4.1.0+6d50a0854c
+	   |-- fabric-loot-api-v3 3.0.12+00a1fba64c
+	   |-- fabric-menu-api-v1 2.0.13+d871b99e4c
+	   |-- fabric-message-api-v1 7.0.5+dae8ce3e4c
+	   |-- fabric-model-loading-api-v1 8.0.7+c80601bb4c
+	   |-- fabric-networking-api-v1 6.3.1+554860db4c
+	   |-- fabric-object-builder-api-v1 23.0.16+b95dd56e4c
+	   |-- fabric-particles-v1 5.0.15+b61fef434c
+	   |-- fabric-permission-api-v1 1.0.1+c3369b134c
+	   |-- fabric-recipe-api-v1 9.0.15+be4b75ae4c
+	   |-- fabric-registry-sync-v0 7.0.13+b61fef434c
+	   |-- fabric-renderer-api-v1 13.0.4+c80601bb4c
+	   |-- fabric-renderer-indigo 8.1.1+1403e82c4c
+	   |-- fabric-rendering-fluids-v1 6.0.1+d871b99e4c
+	   |-- fabric-rendering-v1 23.1.1+1403e82c4c
+	   |-- fabric-resource-conditions-api-v1 6.0.5+00a1fba64c
+	   |-- fabric-resource-loader-v0 3.3.17+4fc5413f4c
+	   |-- fabric-resource-loader-v1 2.0.10+7c44c7324c
+	   |-- fabric-screen-api-v1 5.0.1+d871b99e4c
+	   |-- fabric-serialization-api-v1 2.0.3+11a26f314c
+	   |-- fabric-sound-api-v1 2.0.4+11a26f314c
+	   |-- fabric-tag-api-v1 2.1.1+371cf5db4c
+	   |-- fabric-transfer-api-v1 8.0.5+357ea7334c
+	   \-- fabric-transitive-access-wideners-v1 8.1.1+7f80f93d4c
+	- fabricloader 0.19.2
+	   \-- mixinextras 0.5.4
+	- floodgate 2.2.6-SNAPSHOT
+	   |-- aopalliance_aopalliance 1.0
+	   |-- cloud 2.0.0-beta.16
+	   |    |-- io_leangen_geantyref_geantyref 1.3.15
+	   |    |-- org_incendo_cloud-brigadier 2.0.0-beta.15
+	   |    |-- org_incendo_cloud-core 2.0.0
+	   |    |-- org_incendo_cloud-minecraft-modded-common 2.0.0-beta.16
+	   |    \-- org_incendo_cloud-services 2.0.0
+	   |-- com_google_guava_failureaccess 1.0.1
+	   |-- fabric-permissions-api-v0 0.7.0
+	   |-- jakarta_inject_jakarta_inject-api 2.0.1
+	   |-- javax_inject_javax_inject 1
+	   |-- org_geysermc_cumulus_cumulus 1.1.2
+	   |-- org_geysermc_event_events 1.1-SNAPSHOT
+	   |-- org_geysermc_geyser_common_unshaded 2.2.1-SNAPSHOT
+	   |-- org_java-websocket_java-websocket 1.6.0
+	   \-- org_lanternpowered_lmbda 2.0.0
+	- geyser-fabric 2.10.0-SNAPSHOT
+	   |-- com_google_code_findbugs_jsr305 3.0.2
+	   |-- com_google_errorprone_error_prone_annotations 2.27.0
+	   |-- com_google_j2objc_j2objc-annotations 1.3
+	   |-- com_nukkitx_natives 1.0.3
+	   |-- fabric-permissions-api-v0 0.7.0
+	   |-- io_airlift_aircompressor 0.27
+	   |-- io_netty_netty-codec-haproxy 4.2.7
+	   |-- net_jodah_expiringmap 0.5.10
+	   |-- net_kyori_adventure-api 4.25.0
+	   |-- net_kyori_adventure-key 4.25.0
+	   |-- net_kyori_adventure-nbt 4.25.0
+	   |-- net_kyori_adventure-text-serializer-commons 4.25.0
+	   |-- net_kyori_adventure-text-serializer-gson 4.25.0
+	   |-- net_kyori_adventure-text-serializer-json 4.25.0
+	   |-- net_kyori_adventure-text-serializer-json-legacy-impl 4.25.0
+	   |-- net_kyori_adventure-text-serializer-legacy 4.25.0
+	   |-- net_kyori_adventure-text-serializer-plain 4.25.0
+	   |-- net_kyori_examination-api 1.3.0
+	   |-- net_kyori_examination-string 1.3.0
+	   |-- net_kyori_option 1.1.0
+	   |-- net_lenni0451_commons_gson 1.9.0
+	   |-- net_lenni0451_commons_httpclient 1.9.0
+	   |-- net_raphimc_minecraftauth 5.0.0
+	   |-- org_bitbucket_b_c_jose4j 0.9.6
+	   |-- org_bstats_bstats-base 3.1.0
+	   |-- org_cloudburstmc_math_api 2.0
+	   |-- org_cloudburstmc_math_immutable 2.0
+	   |-- org_cloudburstmc_nbt 3.0.4
+	   |-- org_geysermc_api_base-api 1.0.3
+	   |-- org_geysermc_cumulus_cumulus 1.1.2
+	   |-- org_geysermc_event_events 1.1-SNAPSHOT
+	   |-- org_jetbrains_annotations 24.0.0
+	   |-- org_jspecify_jspecify 1.0.0
+	   |-- org_lanternpowered_lmbda 2.0.0
+	   \-- org_yaml_snakeyaml 2.2
+	- java 25
+	- minecraft 26.1.2
+[17:03:28] [main/WARN]: Found 1 non-fabric mod:
+	- DistantHorizonsSupport-0.13.1.jar
+[17:03:29] [main/INFO]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/D:/Fabric/libraries/net/fabricmc/sponge-mixin/0.17.2+mixin.0.8.7/sponge-mixin-0.17.2+mixin.0.8.7.jar Service=Knot/Fabric Env=SERVER
+[17:03:29] [main/INFO]: Compatibility level set to JAVA_25
+[17:03:29] [main/INFO]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.4).
+[17:03:35] [main/INFO]: Lade Erweiterungen...
+[17:03:35] [main/INFO]: 0 Erweiterung(en) geladen
+[17:03:36] [main/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, profilesHost=https://api.mojang.com, name=PROD]
+[17:03:36] [main/WARN]: Error reading pack metadata, attempting fallback type
+com.google.gson.JsonParseException: Pack declares support for version newer than 81, but is missing mandatory fields min_format and max_format
+	at knot//com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at knot//net.minecraft.server.packs.resources.ResourceMetadata$2.getSection(ResourceMetadata.java:40)
+	at knot//net.minecraft.server.packs.AbstractPackResources.getMetadataSection(AbstractPackResources.java:26)
+	at knot//net.minecraft.server.packs.repository.Pack.readPackMetadata(Pack.java:56)
+	at knot//net.minecraft.server.packs.repository.Pack.readMetaAndCreate(Pack.java:41)
+	at knot//net.minecraft.server.packs.repository.FolderRepositorySource.lambda$loadPacks$0(FolderRepositorySource.java:63)
+	at knot//net.minecraft.server.packs.repository.FolderRepositorySource.discoverPacks(FolderRepositorySource.java:94)
+	at knot//net.minecraft.server.packs.repository.FolderRepositorySource.loadPacks(FolderRepositorySource.java:59)
+	at knot//net.minecraft.server.packs.repository.PackRepository.discoverAvailable(PackRepository.java:43)
+	at knot//net.minecraft.server.packs.repository.PackRepository.reload(PackRepository.java:36)
+	at knot//net.minecraft.server.MinecraftServer.configurePackRepository(MinecraftServer.java:1576)
+	at knot//net.minecraft.server.WorldLoader$PackConfig.createResourceManager(WorldLoader.java:87)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1789)
+	at knot//net.minecraft.util.Util.blockUntilDone(Util.java:1105)
+	at knot//net.minecraft.util.Util.blockUntilDone(Util.java:1093)
+	at knot//net.minecraft.server.Main.main(Main.java:172)
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:514)
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:72)
+	at net.fabricmc.loader.impl.launch.knot.KnotServer.main(KnotServer.java:23)
+	at net.fabricmc.loader.impl.launch.server.FabricServerLauncher.main(FabricServerLauncher.java:69)
+	at net.fabricmc.installer.ServerLauncher.main(ServerLauncher.java:69)
+[17:03:36] [main/INFO]: Found new data pack fabric-convention-tags-v2, loading it automatically
+[17:03:36] [main/INFO]: Found new data pack file/mc-paper-geo-datapack-main, loading it automatically
+[17:03:36] [Worker-Main-8/ERROR]: Registry loading errors:
+> Errors in registry minecraft:dimension_type:
+>> Errors in element minecraft:overworld:
+java.lang.IllegalStateException: Failed to parse minecraft:overworld from pack file/mc-paper-geo-datapack-main
+	at knot//net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:115)
+	at knot//net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:46)
+	at knot//net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:89)
+	at knot//net.minecraft.util.thread.ParallelMapTransform$SingleTaskSplitter.lambda$scheduleBatch$0(ParallelMapTransform.java:160)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: Failed to parse either. First: Not a number: {"min_inclusive":0,"max_inclusive":7}; Second: No key type in MapLike[{"min_inclusive":0,"max_inclusive":7}]
+	at knot//com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at knot//com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at knot//net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:113)
+	... 9 more
+>> Errors in element minecraft:overworld_caves:
+java.lang.IllegalStateException: Failed to parse minecraft:overworld_caves from pack file/mc-paper-geo-datapack-main
+	at knot//net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:115)
+	at knot//net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:46)
+	at knot//net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:89)
+	at knot//net.minecraft.util.thread.ParallelMapTransform$SingleTaskSplitter.lambda$scheduleBatch$0(ParallelMapTransform.java:160)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: Failed to parse either. First: Not a number: {"min_inclusive":0,"max_inclusive":7}; Second: No key type in MapLike[{"min_inclusive":0,"max_inclusive":7}]
+	at knot//com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at knot//com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at knot//net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:113)
+	... 9 more
+> Errors in registry minecraft:root:
+>> Errors in element minecraft:dimension_type:
+java.lang.IllegalStateException: Unbound values in registry ResourceKey[minecraft:root / minecraft:dimension_type]: [minecraft:overworld]
+	at knot//net.minecraft.core.MappedRegistry.freeze(MappedRegistry.java:300)
+	at knot//net.minecraft.resources.RegistryLoadTask.freezeRegistry(RegistryLoadTask.java:87)
+	at knot//net.minecraft.resources.RegistryDataLoader.lambda$load$3(RegistryDataLoader.java:225)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:196)
+	at java.base/java.util.AbstractList$RandomAccessSpliterator.forEachRemaining(AbstractList.java:722)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:570)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:560)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:635)
+	at java.base/java.util.stream.AbstractPipeline.evaluateToArrayNode(AbstractPipeline.java:291)
+	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:652)
+	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:658)
+	at java.base/java.util.stream.ReferencePipeline.toList(ReferencePipeline.java:663)
+	at knot//net.minecraft.resources.RegistryDataLoader.lambda$load$2(RegistryDataLoader.java:225)
+	at knot//net.minecraft.resources.RegistryDataLoader.md31d9be$fabric-registry-sync-v0$lambda$thenApplyAsync$1$1(RegistryDataLoader.java:565)
+	at java.base/jdk.internal.vm.ScopedValueContainer.callWithoutScope(ScopedValueContainer.java:162)
+	at java.base/jdk.internal.vm.ScopedValueContainer.call(ScopedValueContainer.java:147)
+	at java.base/java.lang.ScopedValue$Carrier.call(ScopedValue.java:419)
+	at knot//net.minecraft.resources.RegistryDataLoader.md31d9be$fabric-registry-sync-v0$lambda$thenApplyAsync$0$0(RegistryDataLoader.java:565)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:667)
+	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:504)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+>> Errors in element minecraft:worldgen/density_function:
+java.lang.IllegalStateException: Unbound values in registry ResourceKey[minecraft:root / minecraft:worldgen/density_function]: [minecraft:overworld/base_3d_noise, minecraft:overworld/caves/entrances, minecraft:overworld/caves/noodle, minecraft:overworld/caves/pillars, minecraft:overworld/caves/spaghetti_2d, minecraft:overworld/caves/spaghetti_roughness_function, minecraft:overworld/depth, minecraft:overworld/final_density, minecraft:overworld/vein_gap, minecraft:overworld/vein_ridged, minecraft:overworld/vein_toggle]
+	at knot//net.minecraft.core.MappedRegistry.freeze(MappedRegistry.java:300)
+	at knot//net.minecraft.resources.RegistryLoadTask.freezeRegistry(RegistryLoadTask.java:87)
+	at knot//net.minecraft.resources.RegistryDataLoader.lambda$load$3(RegistryDataLoader.java:225)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:196)
+	at java.base/java.util.AbstractList$RandomAccessSpliterator.forEachRemaining(AbstractList.java:722)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:570)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:560)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:635)
+	at java.base/java.util.stream.AbstractPipeline.evaluateToArrayNode(AbstractPipeline.java:291)
+	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:652)
+	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:658)
+	at java.base/java.util.stream.ReferencePipeline.toList(ReferencePipeline.java:663)
+	at knot//net.minecraft.resources.RegistryDataLoader.lambda$load$2(RegistryDataLoader.java:225)
+	at knot//net.minecraft.resources.RegistryDataLoader.md31d9be$fabric-registry-sync-v0$lambda$thenApplyAsync$1$1(RegistryDataLoader.java:565)
+	at java.base/jdk.internal.vm.ScopedValueContainer.callWithoutScope(ScopedValueContainer.java:162)
+	at java.base/jdk.internal.vm.ScopedValueContainer.call(ScopedValueContainer.java:147)
+	at java.base/java.lang.ScopedValue$Carrier.call(ScopedValue.java:419)
+	at knot//net.minecraft.resources.RegistryDataLoader.md31d9be$fabric-registry-sync-v0$lambda$thenApplyAsync$0$0(RegistryDataLoader.java:565)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:667)
+	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:504)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+>> Errors in element minecraft:worldgen/noise_settings:
+java.lang.IllegalStateException: Unbound values in registry ResourceKey[minecraft:root / minecraft:worldgen/noise_settings]: [minecraft:overworld]
+	at knot//net.minecraft.core.MappedRegistry.freeze(MappedRegistry.java:300)
+	at knot//net.minecraft.resources.RegistryLoadTask.freezeRegistry(RegistryLoadTask.java:87)
+	at knot//net.minecraft.resources.RegistryDataLoader.lambda$load$3(RegistryDataLoader.java:225)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:196)
+	at java.base/java.util.AbstractList$RandomAccessSpliterator.forEachRemaining(AbstractList.java:722)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:570)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:560)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:635)
+	at java.base/java.util.stream.AbstractPipeline.evaluateToArrayNode(AbstractPipeline.java:291)
+	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:652)
+	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:658)
+	at java.base/java.util.stream.ReferencePipeline.toList(ReferencePipeline.java:663)
+	at knot//net.minecraft.resources.RegistryDataLoader.lambda$load$2(RegistryDataLoader.java:225)
+	at knot//net.minecraft.resources.RegistryDataLoader.md31d9be$fabric-registry-sync-v0$lambda$thenApplyAsync$1$1(RegistryDataLoader.java:565)
+	at java.base/jdk.internal.vm.ScopedValueContainer.callWithoutScope(ScopedValueContainer.java:162)
+	at java.base/jdk.internal.vm.ScopedValueContainer.call(ScopedValueContainer.java:147)
+	at java.base/java.lang.ScopedValue$Carrier.call(ScopedValue.java:419)
+	at knot//net.minecraft.resources.RegistryDataLoader.md31d9be$fabric-registry-sync-v0$lambda$thenApplyAsync$0$0(RegistryDataLoader.java:565)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:667)
+	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:504)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+> Errors in registry minecraft:worldgen/density_function:
+>> Errors in element minecraft:overworld/base_3d_noise:
+java.lang.IllegalStateException: Failed to parse minecraft:overworld/base_3d_noise from pack file/mc-paper-geo-datapack-main
+	at knot//net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:115)
+	at knot//net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:46)
+	at knot//net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:89)
+	at knot//net.minecraft.util.thread.ParallelMapTransform$SingleTaskSplitter.lambda$scheduleBatch$0(ParallelMapTransform.java:160)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: Failed to parse either. First: Not a number: "minecraft:overworld/base_3d_noise"; Second: Not a JSON object: "minecraft:overworld/base_3d_noise"
+	at knot//com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at knot//com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at knot//net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:113)
+	... 9 more
+>> Errors in element minecraft:overworld/caves/entrances:
+java.lang.IllegalStateException: Failed to parse minecraft:overworld/caves/entrances from pack file/mc-paper-geo-datapack-main
+	at knot//net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:115)
+	at knot//net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:46)
+	at knot//net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:89)
+	at knot//net.minecraft.util.thread.ParallelMapTransform$SingleTaskSplitter.lambda$scheduleBatch$0(ParallelMapTransform.java:160)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: Failed to parse either. First: Not a number: "minecraft:overworld/caves/entrances"; Second: Not a JSON object: "minecraft:overworld/caves/entrances"
+	at knot//com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at knot//com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at knot//net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:113)
+	... 9 more
+>> Errors in element minecraft:overworld/caves/noodle:
+java.lang.IllegalStateException: Failed to parse minecraft:overworld/caves/noodle from pack file/mc-paper-geo-datapack-main
+	at knot//net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:115)
+	at knot//net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:46)
+	at knot//net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:89)
+	at knot//net.minecraft.util.thread.ParallelMapTransform$SingleTaskSplitter.lambda$scheduleBatch$0(ParallelMapTransform.java:160)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: Failed to parse either. First: Not a number: "minecraft:overworld/caves/noodle"; Second: Not a JSON object: "minecraft:overworld/caves/noodle"
+	at knot//com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at knot//com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at knot//net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:113)
+	... 9 more
+>> Errors in element minecraft:overworld/caves/pillars:
+java.lang.IllegalStateException: Failed to parse minecraft:overworld/caves/pillars from pack file/mc-paper-geo-datapack-main
+	at knot//net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:115)
+	at knot//net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:46)
+	at knot//net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:89)
+	at knot//net.minecraft.util.thread.ParallelMapTransform$SingleTaskSplitter.lambda$scheduleBatch$0(ParallelMapTransform.java:160)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: Failed to parse either. First: Not a number: "minecraft:overworld/caves/pillars"; Second: Not a JSON object: "minecraft:overworld/caves/pillars"
+	at knot//com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at knot//com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at knot//net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:113)
+	... 9 more
+>> Errors in element minecraft:overworld/caves/spaghetti_2d:
+java.lang.IllegalStateException: Failed to parse minecraft:overworld/caves/spaghetti_2d from pack file/mc-paper-geo-datapack-main
+	at knot//net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:115)
+	at knot//net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:46)
+	at knot//net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:89)
+	at knot//net.minecraft.util.thread.ParallelMapTransform$SingleTaskSplitter.lambda$scheduleBatch$0(ParallelMapTransform.java:160)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: Failed to parse either. First: Not a number: "minecraft:overworld/caves/spaghetti_2d"; Second: Not a JSON object: "minecraft:overworld/caves/spaghetti_2d"
+	at knot//com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at knot//com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at knot//net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:113)
+	... 9 more
+>> Errors in element minecraft:overworld/caves/spaghetti_roughness_function:
+java.lang.IllegalStateException: Failed to parse minecraft:overworld/caves/spaghetti_roughness_function from pack file/mc-paper-geo-datapack-main
+	at knot//net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:115)
+	at knot//net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:46)
+	at knot//net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:89)
+	at knot//net.minecraft.util.thread.ParallelMapTransform$SingleTaskSplitter.lambda$scheduleBatch$0(ParallelMapTransform.java:160)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: Failed to parse either. First: Not a number: "minecraft:overworld/caves/spaghetti_roughness_function"; Second: Not a JSON object: "minecraft:overworld/caves/spaghetti_roughness_function"
+	at knot//com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at knot//com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at knot//net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:113)
+	... 9 more
+>> Errors in element minecraft:overworld/depth:
+java.lang.IllegalStateException: Failed to parse minecraft:overworld/depth from pack file/mc-paper-geo-datapack-main
+	at knot//net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:115)
+	at knot//net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:46)
+	at knot//net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:89)
+	at knot//net.minecraft.util.thread.ParallelMapTransform$SingleTaskSplitter.lambda$scheduleBatch$0(ParallelMapTransform.java:160)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: Failed to parse either. First: Not a number: "minecraft:overworld/depth"; Second: Not a JSON object: "minecraft:overworld/depth"
+	at knot//com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at knot//com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at knot//net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:113)
+	... 9 more
+>> Errors in element minecraft:overworld/factor:
+java.lang.IllegalStateException: Failed to parse minecraft:overworld/factor from pack file/mc-paper-geo-datapack-main
+	at knot//net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:115)
+	at knot//net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:46)
+	at knot//net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:89)
+	at knot//net.minecraft.util.thread.ParallelMapTransform$SingleTaskSplitter.lambda$scheduleBatch$0(ParallelMapTransform.java:160)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: Failed to parse either. First: Not a number: "minecraft:overworld/factor"; Second: Not a JSON object: "minecraft:overworld/factor"
+	at knot//com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at knot//com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at knot//net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:113)
+	... 9 more
+>> Errors in element minecraft:overworld/jaggedness:
+java.lang.IllegalStateException: Failed to parse minecraft:overworld/jaggedness from pack file/mc-paper-geo-datapack-main
+	at knot//net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:115)
+	at knot//net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:46)
+	at knot//net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:89)
+	at knot//net.minecraft.util.thread.ParallelMapTransform$SingleTaskSplitter.lambda$scheduleBatch$0(ParallelMapTransform.java:160)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: Failed to parse either. First: Not a number: "minecraft:overworld/jaggedness"; Second: Not a JSON object: "minecraft:overworld/jaggedness"
+	at knot//com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at knot//com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at knot//net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:113)
+	... 9 more
+>> Errors in element minecraft:overworld/offset:
+java.lang.IllegalStateException: Failed to parse minecraft:overworld/offset from pack file/mc-paper-geo-datapack-main
+	at knot//net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:115)
+	at knot//net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:46)
+	at knot//net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:89)
+	at knot//net.minecraft.util.thread.ParallelMapTransform$SingleTaskSplitter.lambda$scheduleBatch$0(ParallelMapTransform.java:160)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: Failed to parse either. First: Not a number: "minecraft:overworld/offset"; Second: Not a JSON object: "minecraft:overworld/offset"
+	at knot//com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at knot//com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at knot//net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:113)
+	... 9 more
+>> Errors in element minecraft:overworld/sloped_cheese:
+java.lang.IllegalStateException: Failed to parse minecraft:overworld/sloped_cheese from pack file/mc-paper-geo-datapack-main
+	at knot//net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:115)
+	at knot//net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:46)
+	at knot//net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:89)
+	at knot//net.minecraft.util.thread.ParallelMapTransform$SingleTaskSplitter.lambda$scheduleBatch$0(ParallelMapTransform.java:160)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: Failed to parse either. First: Not a number: "minecraft:overworld/sloped_cheese"; Second: Not a JSON object: "minecraft:overworld/sloped_cheese"
+	at knot//com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at knot//com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at knot//net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:113)
+	... 9 more
+> Errors in registry minecraft:worldgen/noise_settings:
+>> Errors in element minecraft:overworld:
+java.lang.IllegalStateException: Failed to parse minecraft:overworld from pack file/mc-paper-geo-datapack-main
+	at knot//net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:115)
+	at knot//net.minecraft.resources.ResourceManagerRegistryLoadTask.lambda$load$2(ResourceManagerRegistryLoadTask.java:46)
+	at knot//net.minecraft.util.thread.ParallelMapTransform$Container.applyOperation(ParallelMapTransform.java:89)
+	at knot//net.minecraft.util.thread.ParallelMapTransform$SingleTaskSplitter.lambda$scheduleBatch$0(ParallelMapTransform.java:160)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1817)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: No key offset in MapLike[{"parameter":"offset","min":0.0,"max":0.0}]; No key weirdness in MapLike[{"parameter":"offset","min":0.0,"max":0.0}]; No key depth in MapLike[{"parameter":"offset","min":0.0,"max":0.0}]; No key erosion in MapLike[{"parameter":"offset","min":0.0,"max":0.0}]; No key continentalness in MapLike[{"parameter":"offset","min":0.0,"max":0.0}]; No key humidity in MapLike[{"parameter":"offset","min":0.0,"max":0.0}]; No key temperature in MapLike[{"parameter":"offset","min":0.0,"max":0.0}]; No key offset in MapLike[{"parameter":"depth","min":0.0,"max":0.0}]; No key weirdness in MapLike[{"parameter":"depth","min":0.0,"max":0.0}]; No key depth in MapLike[{"parameter":"depth","min":0.0,"max":0.0}]; No key erosion in MapLike[{"parameter":"depth","min":0.0,"max":0.0}]; No key continentalness in MapLike[{"parameter":"depth","min":0.0,"max":0.0}]; No key humidity in MapLike[{"parameter":"depth","min":0.0,"max":0.0}]; No key temperature in MapLike[{"parameter":"depth","min":0.0,"max":0.0}]; No key offset in MapLike[{"parameter":"weirdness","min":-0.1,"max":0.1}]; No key weirdness in MapLike[{"parameter":"weirdness","min":-0.1,"max":0.1}]; No key depth in MapLike[{"parameter":"weirdness","min":-0.1,"max":0.1}]; No key erosion in MapLike[{"parameter":"weirdness","min":-0.1,"max":0.1}]; No key continentalness in MapLike[{"parameter":"weirdness","min":-0.1,"max":0.1}]; No key humidity in MapLike[{"parameter":"weirdness","min":-0.1,"max":0.1}]; No key temperature in MapLike[{"parameter":"weirdness","min":-0.1,"max":0.1}]; No key offset in MapLike[{"parameter":"erosion","min":-0.1,"max":0.1}]; No key weirdness in MapLike[{"parameter":"erosion","min":-0.1,"max":0.1}]; No key depth in MapLike[{"parameter":"erosion","min":-0.1,"max":0.1}]; No key erosion in MapLike[{"parameter":"erosion","min":-0.1,"max":0.1}]; No key continentalness in MapLike[{"parameter":"erosion","min":-0.1,"max":0.1}]; No key humidity in MapLike[{"parameter":"erosion","min":-0.1,"max":0.1}]; No key temperature in MapLike[{"parameter":"erosion","min":-0.1,"max":0.1}]; No key offset in MapLike[{"parameter":"continentalness","min":-0.1,"max":0.1}]; No key weirdness in MapLike[{"parameter":"continentalness","min":-0.1,"max":0.1}]; No key depth in MapLike[{"parameter":"continentalness","min":-0.1,"max":0.1}]; No key erosion in MapLike[{"parameter":"continentalness","min":-0.1,"max":0.1}]; No key continentalness in MapLike[{"parameter":"continentalness","min":-0.1,"max":0.1}]; No key humidity in MapLike[{"parameter":"continentalness","min":-0.1,"max":0.1}]; No key temperature in MapLike[{"parameter":"continentalness","min":-0.1,"max":0.1}]; No key surface_rule in MapLike[{"sea_level":63,"ore_veins_enabled":true,"disable_mob_generation":false,"aquifers_enabled":true,"legacy_random_source":false,"default_block":{"Name":"minecraft:stone"},"default_fluid":{"Name":"minecraft:water","Properties":{"level":"0"}},"noise":{"min_y":-64,"height":2064,"size_horizontal":1,"size_vertical":2},"density_functions":{"offset":{"type":"minecraft:add","argument1":{"type":"minecraft:y_clamped_gradient","from_y":-64,"to_y":1700,"from_value":-2.0,"to_value":1.5},"argument2":{"type":"minecraft:flat_cache","argument":{"type":"minecraft:spline","spline":{"coordinate":"minecraft:overworld/continents","points":[{"location":-1.1,"value":-0.15,"derivative":0.0},{"location":-1.02,"value":-0.13,"derivative":0.0},{"location":-0.51,"value":-0.1,"derivative":0.0},{"location":-0.44,"value":-0.1,"derivative":0.0},{"location":-0.18,"value":-0.06,"derivative":0.0},{"location":-0.16,"value":-0.07,"derivative":0.0},{"location":-0.15,"value":-0.1,"derivative":0.0},{"location":0.25,"value":0.0,"derivative":0.0},{"location":1.0,"value":0.3,"derivative":0.0}]}}}},"factor":{"type":"minecraft:flat_cache","argument":{"type":"minecraft:spline","spline":{"coordinate":"minecraft:overworld/continents","points":[{"location":-0.19,"value":3.95,"derivative":0.0},{"location":-0.15,"value":3.95,"derivative":0.0},{"location":-0.1,"value":3.0,"derivative":0.0},{"location":0.03,"value":3.0,"derivative":0.0},{"location":0.06,"value":2.5,"derivative":0.0}]}}},"jaggedness":{"type":"minecraft:flat_cache","argument":{"type":"minecraft:spline","spline":{"coordinate":"minecraft:overworld/continents","points":[{"location":-0.11,"value":0.0,"derivative":0.0},{"location":0.03,"value":0.0,"derivative":0.0},{"location":0.65,"value":0.0,"derivative":0.0}]}}},"depth":{"type":"minecraft:add","argument1":{"type":"minecraft:y_clamped_gradient","from_y":-64,"to_y":1700,"from_value":1.5,"to_value":-1.5},"argument2":"minecraft:overworld/offset"},"squeeze":{"type":"minecraft:clamp","input":{"type":"minecraft:mul","argument1":"minecraft:overworld/depth","argument2":{"type":"minecraft:cache_once","argument":"minecraft:overworld/factor"}},"min":-64.0,"max":64.0},"initial_density_without_jaggedness":{"type":"minecraft:add","argument1":{"type":"minecraft:mul","argument1":4.0,"argument2":{"type":"minecraft:mul","argument1":"minecraft:overworld/depth","argument2":{"type":"minecraft:cache_once","argument":"minecraft:overworld/factor"}}},"argument2":{"type":"minecraft:noise","noise":"minecraft:gravel","xz_scale":0.1,"y_scale":0.1}},"final_density":{"type":"minecraft:squeeze","argument":{"type":"minecraft:add","argument1":{"type":"minecraft:interpolated","argument":{"type":"minecraft:blend_density","argument":{"type":"minecraft:add","argument1":"minecraft:overworld/sloped_cheese","argument2":{"type":"minecraft:range_choice","input":"minecraft:overworld/sloped_cheese","min_inclusive":-1000000.0,"max_exclusive":1.5625,"when_in_range":{"type":"minecraft:min","argument1":"minecraft:overworld/sloped_cheese","argument2":{"type":"minecraft:mul","argument1":5.0,"argument2":"minecraft:overworld/caves/entrances"}},"when_out_of_range":"minecraft:overworld/caves/noodle"}}}},"argument2":{"type":"minecraft:blend_offset"}}},"vein_toggle":{"type":"minecraft:interpolated","argument":{"type":"minecraft:y_clamped_gradient","from_y":-60,"to_y":-40,"from_value":-8.0,"to_value":0.0}},"vein_ridged":{"type":"minecraft:add","argument1":-0.0125,"argument2":{"type":"minecraft:min","argument1":{"type":"minecraft:abs","argument":{"type":"minecraft:noise","noise":"minecraft:ore_veininess","xz_scale":1.5,"y_scale":1.5}},"argument2":{"type":"minecraft:abs","argument":{"type":"minecraft:noise","noise":"minecraft:ore_veininess","xz_scale":1.5,"y_scale":1.5}}}},"vein_gap":{"type":"minecraft:noise","noise":"minecraft:ore_gap","xz_scale":1.0,"y_scale":1.0}},"noise_router":{"barrier":{"type":"minecraft:noise","noise":"minecraft:aquifer_barrier","xz_scale":1.0,"y_scale":0.5},"fluid_level_floodedness":{"type":"minecraft:noise","noise":"minecraft:aquifer_fluid_level_floodedness","xz_scale":1.0,"y_scale":0.67},"fluid_level_spread":{"type":"minecraft:noise","noise":"minecraft:aquifer_fluid_level_spread","xz_scale":1.0,"y_scale":0.7142857},"lava":{"type":"minecraft:noise","noise":"minecraft:aquifer_lava","xz_scale":1.0,"y_scale":1.0},"temperature":{"type":"minecraft:shifted_noise","noise":"minecraft:temperature","xz_scale":0.25,"y_scale":0.0,"shift_x":"minecraft:shift_x","shift_y":0.0,"shift_z":"minecraft:shift_z"},"vegetation":{"type":"minecraft:shifted_noise","noise":"minecraft:vegetation","xz_scale":0.25,"y_scale":0.0,"shift_x":"minecraft:shift_x","shift_y":0.0,"shift_z":"minecraft:shift_z"},"continents":{"type":"minecraft:shifted_noise","noise":"minecraft:continentalness","xz_scale":0.25,"y_scale":0.0,"shift_x":"minecraft:shift_x","shift_y":0.0,"shift_z":"minecraft:shift_z"},"erosion":{"type":"minecraft:shifted_noise","noise":"minecraft:erosion","xz_scale":0.25,"y_scale":0.0,"shift_x":"minecraft:shift_x","shift_y":0.0,"shift_z":"minecraft:shift_z"},"depth":"minecraft:overworld/depth","ridges":{"type":"minecraft:shifted_noise","noise":"minecraft:ridge","xz_scale":0.25,"y_scale":0.0,"shift_x":"minecraft:shift_x","shift_y":0.0,"shift_z":"minecraft:shift_z"},"initial_density_without_jaggedness":"minecraft:overworld/initial_density_without_jaggedness","final_density":"minecraft:overworld/final_density","vein_toggle":"minecraft:overworld/vein_toggle","vein_ridged":"minecraft:overworld/vein_ridged","vein_gap":"minecraft:overworld/vein_gap"},"spawn_target":[{"parameter":"continentalness","min":-0.1,"max":0.1},{"parameter":"erosion","min":-0.1,"max":0.1},{"parameter":"weirdness","min":-0.1,"max":0.1},{"parameter":"depth","min":0.0,"max":0.0},{"parameter":"offset","min":0.0,"max":0.0}]}]; No key preliminary_surface_level in MapLike[{"barrier":{"type":"minecraft:noise","noise":"minecraft:aquifer_barrier","xz_scale":1.0,"y_scale":0.5},"fluid_level_floodedness":{"type":"minecraft:noise","noise":"minecraft:aquifer_fluid_level_floodedness","xz_scale":1.0,"y_scale":0.67},"fluid_level_spread":{"type":"minecraft:noise","noise":"minecraft:aquifer_fluid_level_spread","xz_scale":1.0,"y_scale":0.7142857},"lava":{"type":"minecraft:noise","noise":"minecraft:aquifer_lava","xz_scale":1.0,"y_scale":1.0},"temperature":{"type":"minecraft:shifted_noise","noise":"minecraft:temperature","xz_scale":0.25,"y_scale":0.0,"shift_x":"minecraft:shift_x","shift_y":0.0,"shift_z":"minecraft:shift_z"},"vegetation":{"type":"minecraft:shifted_noise","noise":"minecraft:vegetation","xz_scale":0.25,"y_scale":0.0,"shift_x":"minecraft:shift_x","shift_y":0.0,"shift_z":"minecraft:shift_z"},"continents":{"type":"minecraft:shifted_noise","noise":"minecraft:continentalness","xz_scale":0.25,"y_scale":0.0,"shift_x":"minecraft:shift_x","shift_y":0.0,"shift_z":"minecraft:shift_z"},"erosion":{"type":"minecraft:shifted_noise","noise":"minecraft:erosion","xz_scale":0.25,"y_scale":0.0,"shift_x":"minecraft:shift_x","shift_y":0.0,"shift_z":"minecraft:shift_z"},"depth":"minecraft:overworld/depth","ridges":{"type":"minecraft:shifted_noise","noise":"minecraft:ridge","xz_scale":0.25,"y_scale":0.0,"shift_x":"minecraft:shift_x","shift_y":0.0,"shift_z":"minecraft:shift_z"},"initial_density_without_jaggedness":"minecraft:overworld/initial_density_without_jaggedness","final_density":"minecraft:overworld/final_density","vein_toggle":"minecraft:overworld/vein_toggle","vein_ridged":"minecraft:overworld/vein_ridged","vein_gap":"minecraft:overworld/vein_gap"}]
+	at knot//com.mojang.serialization.DataResult$Error.getOrThrow(DataResult.java:287)
+	at knot//com.mojang.serialization.DataResult.getOrThrow(DataResult.java:81)
+	at knot//net.minecraft.resources.RegistryLoadTask$PendingRegistration.loadFromResource(RegistryLoadTask.java:113)
+	... 9 more
+
+[17:03:37] [main/WARN]: Failed to load datapacks, can't proceed with server load. You can either fix your datapacks or reset to vanilla with --safeMode
+java.util.concurrent.ExecutionException: net.minecraft.ReportedException: Registry Loading
+	at java.base/java.util.concurrent.CompletableFuture.wrapInExecutionException(CompletableFuture.java:345)
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:440)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2094)
+	at knot//net.minecraft.server.Main.main(Main.java:193)
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:514)
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:72)
+	at net.fabricmc.loader.impl.launch.knot.KnotServer.main(KnotServer.java:23)
+	at net.fabricmc.loader.impl.launch.server.FabricServerLauncher.main(FabricServerLauncher.java:69)
+	at net.fabricmc.installer.ServerLauncher.main(ServerLauncher.java:69)
+Caused by: net.minecraft.ReportedException: Registry Loading
+	at knot//net.minecraft.resources.RegistryDataLoader.createReportWithBriefInfo(RegistryDataLoader.java:297)
+	at knot//net.minecraft.resources.RegistryDataLoader.logErrors(RegistryDataLoader.java:262)
+	at knot//net.minecraft.resources.RegistryDataLoader.lambda$load$2(RegistryDataLoader.java:227)
+	at knot//net.minecraft.resources.RegistryDataLoader.md31d9be$fabric-registry-sync-v0$lambda$thenApplyAsync$1$1(RegistryDataLoader.java:565)
+	at java.base/jdk.internal.vm.ScopedValueContainer.callWithoutScope(ScopedValueContainer.java:162)
+	at java.base/jdk.internal.vm.ScopedValueContainer.call(ScopedValueContainer.java:147)
+	at java.base/java.lang.ScopedValue$Carrier.call(ScopedValue.java:419)
+	at knot//net.minecraft.resources.RegistryDataLoader.md31d9be$fabric-registry-sync-v0$lambda$thenApplyAsync$0$0(RegistryDataLoader.java:565)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:667)
+	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:504)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+Caused by: java.lang.IllegalStateException: Failed to load registries due to errors
+	at knot//net.minecraft.resources.RegistryDataLoader.createReportWithBriefInfo(RegistryDataLoader.java:281)
+	... 13 more
