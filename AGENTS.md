@@ -47,15 +47,15 @@ mc-paper-geo-datapack/
 
 ## 4. Technical Debt / To-Do Liste
 
-- [ ] Erstellen der `pack.mcmeta` mit `pack_format: 101` und den neuen Feldern (`min_format`, `max_format`).
-- [ ] Erstellen der `data/minecraft/dimension_type/overworld.json`:
+- [x] Erstellen der `pack.mcmeta` mit `pack_format: 101` und den neuen Feldern (`min_format`, `max_format`).
+- [x] Erstellen der `data/minecraft/dimension_type/overworld.json`:
   - Anpassung der Parameter `min_y: -64` und `height: 2064`.
   - Berücksichtigung von `monster_spawn_light_level` mit Distribution-Typ.
-- [ ] Erstellen der `data/minecraft/worldgen/noise_settings/overworld.json`:
+- [x] Erstellen der `data/minecraft/worldgen/noise_settings/overworld.json`:
   - Anhebung der Generierungsgrenzen auf 2064.
   - Anpassung der Noise-Router und Surface-Rules für Y=1999.
   - Implementierung einer modularen Struktur, um später einfache Terrain- und Biom-Anpassungen zu ermöglichen.
   - Sicherstellen, dass `noise_router.preliminary_surface_level` existiert.
   - Korrekte `spawn_target`-Arrays setzen.
-- [ ] Extraktion und Erstellung der `data/minecraft/worldgen/density_function/...` Dateien:
+- [x] Extraktion und Erstellung der `data/minecraft/worldgen/density_function/...` Dateien:
   - Definition aller referenzierten Density-Functions als eigenständige JSON-Dateien, um das Format 101 konform zu bedienen.
