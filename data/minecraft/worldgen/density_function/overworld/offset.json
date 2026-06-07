@@ -28,7 +28,7 @@
         "type": "minecraft:mul",
         "argument1": {
           "type": "minecraft:add",
-          "argument1": -0.5037500262260437,
+          "argument1": 0.38,
           "argument2": {
             "type": "minecraft:spline",
             "spline": {
@@ -37,27 +37,27 @@
                 {
                   "derivative": 0.0,
                   "location": -1.0,
-                  "value": -0.7
+                  "value": 0.1
                 },
                 {
                   "derivative": 0.0,
                   "location": -0.8,
-                  "value": -0.6
+                  "value": 0.12
                 },
                 {
                   "derivative": 0.0,
                   "location": -0.4,
-                  "value": -0.2
+                  "value": 0.15
                 },
                 {
                   "derivative": 0.0,
                   "location": -0.1,
-                  "value": -0.05
+                  "value": 0.18
                 },
                 {
                   "derivative": 0.0,
                   "location": 0.0,
-                  "value": 0.0
+                  "value": 0.20
                 },
                 {
                   "derivative": 0.0,
