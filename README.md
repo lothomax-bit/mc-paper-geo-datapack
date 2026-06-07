@@ -1,6 +1,6 @@
 # mc-paper-geo-datapack
 
-Minecraft Datapack für **Paper-Server** (Minecraft 26.1.2) zur Anhebung der maximalen Bauhöhe auf **2000 Blöcke** (Y -64 bis Y 1999).
+Minecraft Datapack für **Minecraft-Server** (Minecraft 26.1.2) zur Anhebung der maximalen Bauhöhe auf **2000 Blöcke** (Y -64 bis Y 1999).
 
 ## Ziel
 
