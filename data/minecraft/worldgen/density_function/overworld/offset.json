@@ -37,30 +37,30 @@
                 {
                   "derivative": 0.0,
                   "location": -1.0,
-                  "value": 0.1
+                  "value": -0.7
                 },
                 {
                   "derivative": 0.0,
                   "location": -0.8,
-                  "value": 0.12
+                  "value": -0.55
                 },
                 {
                   "derivative": 0.0,
                   "location": -0.4,
-                  "value": 0.15
+                  "value": -0.15
                 },
                 {
                   "derivative": 0.0,
                   "location": -0.1,
-                  "value": 0.18
+                  "value": -0.03
                 },
                 {
                   "derivative": 0.0,
                   "location": 0.0,
-                  "value": 0.20
+                  "value": 0.02
                 },
                 {
-                  "derivative": 0.0,
+                  "derivative": 0.1,
                   "location": 0.1,
                   "value": {
                     "coordinate": "minecraft:overworld/erosion",
@@ -74,12 +74,12 @@
                             {
                               "derivative": 0.0,
                               "location": -1.0,
-                              "value": 0.0
+                              "value": 0.08
                             },
                             {
                               "derivative": 0.0,
                               "location": 1.0,
-                              "value": 0.05
+                              "value": 0.3
                             }
                           ]
                         }
@@ -87,7 +87,40 @@
                       {
                         "derivative": 0.0,
                         "location": 1.0,
-                        "value": 0.025
+                        "value": 0.15
+                      }
+                    ]
+                  }
+                },
+                {
+                  "derivative": 0.1,
+                  "location": 0.3,
+                  "value": {
+                    "coordinate": "minecraft:overworld/erosion",
+                    "points": [
+                      {
+                        "derivative": 0.0,
+                        "location": -1.0,
+                        "value": {
+                          "coordinate": "minecraft:overworld/ridges_folded",
+                          "points": [
+                            {
+                              "derivative": 0.0,
+                              "location": -1.0,
+                              "value": 0.22
+                            },
+                            {
+                              "derivative": 0.0,
+                              "location": 1.0,
+                              "value": 0.6
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "derivative": 0.0,
+                        "location": 1.0,
+                        "value": 0.375
                       }
                     ]
                   }
@@ -107,12 +140,12 @@
                             {
                               "derivative": 0.0,
                               "location": -1.0,
-                              "value": 0.05
+                              "value": 0.35
                             },
                             {
                               "derivative": 0.0,
                               "location": 1.0,
-                              "value": 0.15
+                              "value": 0.9
                             }
                           ]
                         }
@@ -120,7 +153,7 @@
                       {
                         "derivative": 0.0,
                         "location": 1.0,
-                        "value": 0.1
+                        "value": 0.6
                       }
                     ]
                   }
@@ -140,12 +173,12 @@
                             {
                               "derivative": 0.0,
                               "location": -1.0,
-                              "value": 0.1
+                              "value": 0.42
                             },
                             {
                               "derivative": 0.0,
                               "location": 1.0,
-                              "value": 0.2
+                              "value": 1.2
                             }
                           ]
                         }
@@ -153,13 +186,79 @@
                       {
                         "derivative": 0.0,
                         "location": 1.0,
-                        "value": 0.15000000000000002
+                        "value": 0.9
                       }
                     ]
                   }
                 },
                 {
-                  "derivative": 0.0,
+                  "derivative": 0.2,
+                  "location": 0.8,
+                  "value": {
+                    "coordinate": "minecraft:overworld/erosion",
+                    "points": [
+                      {
+                        "derivative": 0.0,
+                        "location": -1.0,
+                        "value": {
+                          "coordinate": "minecraft:overworld/ridges_folded",
+                          "points": [
+                            {
+                              "derivative": 0.0,
+                              "location": -1.0,
+                              "value": 0.62
+                            },
+                            {
+                              "derivative": 0.0,
+                              "location": 1.0,
+                              "value": 1.65
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "derivative": 0.0,
+                        "location": 1.0,
+                        "value": 1.2
+                      }
+                    ]
+                  }
+                },
+                {
+                  "derivative": 0.3,
+                  "location": 0.9,
+                  "value": {
+                    "coordinate": "minecraft:overworld/erosion",
+                    "points": [
+                      {
+                        "derivative": 0.0,
+                        "location": -1.0,
+                        "value": {
+                          "coordinate": "minecraft:overworld/ridges_folded",
+                          "points": [
+                            {
+                              "derivative": 0.0,
+                              "location": -1.0,
+                              "value": 0.78
+                            },
+                            {
+                              "derivative": 0.0,
+                              "location": 1.0,
+                              "value": 1.875
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "derivative": 0.0,
+                        "location": 1.0,
+                        "value": 1.35
+                      }
+                    ]
+                  }
+                },
+                {
+                  "derivative": 0.1,
                   "location": 1.0,
                   "value": {
                     "coordinate": "minecraft:overworld/erosion",
@@ -173,12 +272,12 @@
                             {
                               "derivative": 0.0,
                               "location": -1.0,
-                              "value": 0.15
+                              "value": 0.92
                             },
                             {
                               "derivative": 0.0,
                               "location": 1.0,
-                              "value": 0.35
+                              "value": 2.1
                             }
                           ]
                         }
@@ -186,7 +285,7 @@
                       {
                         "derivative": 0.0,
                         "location": 1.0,
-                        "value": 0.25
+                        "value": 1.5
                       }
                     ]
                   }
