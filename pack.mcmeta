@@ -1,0 +1,10 @@
+{
+  "pack": {
+    "pack_format": 101,
+    "supported_formats": {
+      "min_inclusive": 101,
+      "max_inclusive": 101
+    },
+    "description": "mc-paper-geo-datapack (2064 Blocks Height)"
+  }
+}
