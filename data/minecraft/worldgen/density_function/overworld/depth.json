@@ -1,36 +1,23 @@
 {
   "type": "minecraft:add",
   "argument1": {
-    "type": "minecraft:spline",
-    "spline": {
-      "coordinate": "minecraft:y",
-      "points": [
-        {
-          "location": -64.0,
-          "value": 1.5,
-          "derivative": -0.0078125
-        },
-        {
-          "location": 63.0,
-          "value": 0.5078125,
-          "derivative": -0.005
-        },
-        {
-          "location": 500.0,
-          "value": -0.4,
-          "derivative": -0.001
-        },
-        {
-          "location": 1700.0,
-          "value": -1.2,
-          "derivative": -0.001
-        },
-        {
-          "location": 1999.0,
-          "value": -1.5,
-          "derivative": 0.0
-        }
-      ]
+    "type": "minecraft:range_choice",
+    "input": "minecraft:y",
+    "min_inclusive": -1000000.0,
+    "max_exclusive": 63.0,
+    "when_in_range": {
+      "type": "minecraft:y_clamped_gradient",
+      "from_y": -64,
+      "from_value": 1.5,
+      "to_y": 63,
+      "to_value": 0.5078125
+    },
+    "when_out_of_range": {
+      "type": "minecraft:y_clamped_gradient",
+      "from_y": 63,
+      "from_value": 0.5078125,
+      "to_y": 1999,
+      "to_value": -1.5238
     }
   },
   "argument2": "minecraft:overworld/offset"
